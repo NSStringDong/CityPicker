@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll-x</title>
+</head>
+<body>
+	<div id="#app">
+		<div class="padding-style">
+			<div class='overflow-company-second'>
+	  			<div class="special-list">
+					<div class='active'>发现简书</div>
+					<div>我的关注</div>
+					<div>消息评论</div>
+					<div>投稿请求</div>
+					<div>喜欢和赞</div>
+					<div>赞赏和付费</div>
+	  			</div>
+			</div>
+  		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	<style type="text/css">
+		.padding-style {
+			padding: 0 28px;
+		}
+		.overflow-company-second{
+			overflow: hidden;
+			height: 88px;
+			border-bottom: 1px solid #ccc;
+		}
+		.special-list {
+			line-height: 88px;
+			font-size: 30px;
+			display: flex;
+			overflow-x: auto;
+			justify-content: space-between;
+			padding-bottom: 40px;
+		}
+		.special-list>div {
+			text-align: center;
+			font-size: 30px;
+			color: #283B42;
+			font-weight: bold;
+			flex-basis: 172px;
+			flex-shrink: 0;
+			white-space: nowrap;
+		}
+		.special-list>div.active {
+			position: relative;
+		}
+		.special-list>div.active::before {
+			content: "";
+			display: block;
+			clear: both;
+			width: 120px;
+			height: 6px;
+			background-image: linear-gradient(90deg, #ea6f5a 58%, #eebeb6 100%);
+			border-radius: 40px;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+		}
+	</style>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+
+			},
+			created() {
+
+			},
+			mounted() {
+
+			},
+			watch: {
+
+			},
+			methods: {
+
+			}
+		})
+	</script>
+</body>
+</html>
